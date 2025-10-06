@@ -12,6 +12,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      - name: Setup PowerShell
+        uses: actions/setup-powershell@v1
+
       - name: Run validator script
         shell: pwsh
         run: ./validate.ps1

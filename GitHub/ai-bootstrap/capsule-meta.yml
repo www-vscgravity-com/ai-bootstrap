@@ -1,0 +1,8 @@
+﻿name: AI Bootstrap Capsule
+description: Conda-powered Python environment with validator logic and Jupyter notebook for recruiter-facing proof.
+tags:
+  - AI
+  - Python
+  - Jupyter
+  - GitHub Actions
+  - Validator
