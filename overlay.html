@@ -1,0 +1,17 @@
+﻿<script>
+  async function updateCapsuleStatus() {
+    const response = await fetch('http://localhost:5000/predict', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ input: 'profit capsule with AI logic' })
+    });
+    const data = await response.json();
+    document.getElementById('capsule-status').innerText = 
+      \Prediction: \ | Confidence: \\;
+  }
+
+  window.onload = updateCapsuleStatus;
+</script>
+<div id="capsule-status" style="font-weight:bold; margin-top:10px;">
+  Loading capsule status...
+</div>

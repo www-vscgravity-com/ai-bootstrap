@@ -1,0 +1,78 @@
+﻿<div id='capsule-status' style='font-weight:bold; margin-top:10px;'>
+  Loading capsule status...
+</div>
+
+<script>
+  async function updateCapsuleStatus() {
+    const response = await fetch('http://localhost:5000/predict', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ input: 'profit capsule with AI logic' })
+    });
+    const data = await response.json();
+    document.getElementById('capsule-status').innerText =
+      \Prediction: \ | Confidence: \\;
+  }
+
+  window.onload = updateCapsuleStatus;
+</script>
+<div id='capsule-status' style='font-weight:bold; margin-top:10px;'>
+  Loading capsule status...
+</div>
+
+<script>
+  async function updateCapsuleStatus() {
+    const response = await fetch('http://localhost:5000/predict', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ input: 'profit capsule with AI logic' })
+    });
+    const data = await response.json();
+    document.getElementById('capsule-status').innerText =
+      \Prediction: \ | Confidence: \\;
+  }
+
+  window.onload = updateCapsuleStatus;
+</script>
+<div id='capsule-status' style='font-weight:bold; margin-top:10px;'>
+  Loading capsule status...
+</div>
+
+<script>
+  async function updateCapsuleStatus() {
+    const response = await fetch('http://localhost:5000/status');
+    const data = await response.json();
+    document.getElementById('capsule-status').innerText =
+      \Status: \ | Uptime: \ | Requests: \\;
+  }
+
+  window.onload = updateCapsuleStatus;
+</script>
+<div id='capsule-status' style='font-weight:bold; margin-top:10px;'>
+  Loading capsule status...
+</div>
+<div id='capsule-predict' style='font-weight:bold; margin-top:10px;'>
+  Loading prediction...
+</div>
+
+<script>
+  async function updateCapsuleOverlay() {
+    // /status endpoint
+    const statusRes = await fetch('http://localhost:5000/status');
+    const statusData = await statusRes.json();
+    document.getElementById('capsule-status').innerText =
+      \Status: \ | Uptime: \ | Requests: \\;
+
+    // /predict endpoint
+    const predictRes = await fetch('http://localhost:5000/predict', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ input: 'profit capsule with AI logic' })
+    });
+    const predictData = await predictRes.json();
+    document.getElementById('capsule-predict').innerText =
+      \Prediction: \ | Confidence: \\;
+  }
+
+  window.onload = updateCapsuleOverlay;
+</script>
