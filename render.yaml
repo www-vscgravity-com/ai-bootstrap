@@ -1,0 +1,9 @@
+﻿services:
+  - type: web
+    name: profit-capsule
+    env: python
+    buildCommand: ""
+    startCommand: python api.py
+    repo: https://github.com/your-username/your-repo-name
+    branch: main
+    autoDeploy: true
