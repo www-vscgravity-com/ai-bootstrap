@@ -5,6 +5,6 @@ services:
     buildCommand: poetry install
     startCommand: poetry run gunicorn api:app --bind 0.0.0.0:$PORT
     plan: free
-    repo: https://github.com/www-vscgravity-com/ai-bootstrap
+    repo: https://github.com/gravity-binary-architecture/validatorCapsule
     branch: main
     autoDeploy: true
