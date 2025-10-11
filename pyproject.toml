@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "ai-bootstrap"
+version = "0.1.0"
+description = "Validator capsule for Gravity Binary"
+authors = ["Todd Wolf"]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+flask = "^3.1.2"
+requests = "^2.32.5"
+gunicorn = "^23.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,9 +1,10 @@
-﻿services:
+services:
   - type: web
-    name: profit-capsule
+    name: ai-bootstrap
     env: python
-    buildCommand: ""
-    startCommand: python api.py
-    repo: https://github.com/your-username/your-repo-name
+    buildCommand: poetry install
+    startCommand: poetry run gunicorn api:app --bind 0.0.0.0:$PORT
+    plan: free
+    repo: https://github.com/www-vscgravity-com/ai-bootstrap
     branch: main
     autoDeploy: true
